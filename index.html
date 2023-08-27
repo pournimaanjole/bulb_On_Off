@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light on off</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <img src="light2.png" alt="" id="light">
+
+    <button type="button" onclick="onOff()" class="btn btn-outline-success">ON/OFF</button>
+
+    <!-- <button type="button" onclick="onbulb()"> ON</button>
+    <button type="button" onclick="offbulb()"> OFF</button> -->
+    <script>
+        const lightimg=document.getElementById("light");
+        let state=false;
+        function onOff(){
+            if(state==false){
+                lightimg.src="light1.png";
+                state=true;
+            }
+            else{
+                lightimg.src="light2.png";
+                state=false;
+            }
+
+        }
+        // function onbulb(){
+        //     lightimg.src="light1.png";
+        // }
+        // function offbulb(){
+        //     lightimg.src="light2.png";
+        // }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
